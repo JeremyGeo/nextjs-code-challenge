@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import stylesHome from './css/Home.module.css';
 import stylesAboutUs from './css/AboutUs.module.css';
