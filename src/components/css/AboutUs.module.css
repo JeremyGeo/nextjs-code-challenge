@@ -1,0 +1,251 @@
+/* src/styles/AboutUs.module.css */
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about-banner {
+    position: relative;
+    border-radius: var(--radius-8);
+    overflow: hidden;
+    margin-block-end: 25px;
+}
+
+.about :is(.section-title, .section-text) { text-align: left; }
+
+.about .section-title { margin-block-end: 5px; }
+
+.about .section-text:not(:last-child) { margin-block-end: 18px; }
+
+.about .h3 { margin-block-end: 8px; }
+
+.about-list { margin-block: 15px 18px; }
+
+.about-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.about-item:not(:last-child) { margin-block-end: 12px; }
+
+/*-----------------------------------*\
+  #CULTURE
+\*-----------------------------------*/
+.culture-banner {
+    display: none;
+}
+
+.culture {
+    position: relative;
+    z-index: 1;
+}
+
+.culture::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.culture-item {
+    margin-inline: auto;
+    filter: var(--shadow-2);
+    text-align: center;
+}
+
+.culture-item img {
+    margin-inline: auto;
+}
+
+.culture-item .item-title {
+    margin-block: 20px 10px;
+}
+
+.culture .grid-list {
+  display: grid;
+    grid-template-columns:  1fr;
+    gap:  50px;
+    
+}
+
+/*-----------------------------------*\
+  #TEAM ABOUT US
+\*-----------------------------------*/
+
+.team :is(.section-subtitle, .section-title) { text-align: left; }
+
+.team .section-title { margin-block-end: 50px; }
+
+.team-card {
+  background-color: var(--white);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  height: 100%;
+}
+
+.team-card .card-content { padding: 30px; }
+
+.team-card .card-title { transition: var(--transition-1); }
+
+.team-card .card-title { color: var(--raisin-black); }
+
+.team-card .card-text { margin-block: 16px 20px; }
+
+
+
+.team .grid-list {
+    display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px
+}
+
+.imgCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media (min-width: 575px) {
+  .aboutContainer { 
+    max-width: 570px;
+    width: 100%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px
+  }
+}
+
+@media (min-width: 768px) {
+    /**
+   * ABOUT
+   */
+
+   .aboutContainer { 
+    max-width: 900px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+   .about-banner { max-width: 550px; }
+
+   .about .section-text {
+     max-width: unset;
+     margin-inline: 0;
+   }
+
+   /**
+   * TEAM ABOUT US
+   */
+
+  .team .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px
+  }
+  .service .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 992px) {
+    /**
+   * ABOUT
+   */
+
+   .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-banner { margin-block-end: 0; }
+
+  /**
+   * CULTURE
+   */
+
+   .culture .grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+    /**
+   * ABOUT
+   */
+
+   
+
+   .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 960px;
+   }
+
+   .about-item { gap: 7px; }
+
+    /**
+   * CULTURE
+   */
+
+.culture-banner {
+    display: block; 
+    max-width: 540px;
+    margin-inline: auto;
+  }
+  
+  .culture .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .culture-item {
+    text-align: left;
+  }
+  
+  .culture-item .item-icon { margin-inline: 0;}
+  
+  
+  
+  .culture .grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+  }
+
+
+  /**
+   * TEAM ABOUT US
+   */
+.team .grid-list { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px
+  }
+
+.service .grid-list {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+}
