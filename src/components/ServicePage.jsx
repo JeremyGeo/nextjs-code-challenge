@@ -76,17 +76,17 @@ const ServicesPage = () => {
         <div className="container">
           <p className="section-subtitle" id="team-label">Case Studies</p>
           <h2 className="h2 section-title">Let's Hear What Others Say</h2>
-          <div className={`team ${stylesAboutUs.team}`}>
-            <ul className={`grid-list ${stylesAboutUs['grid-list']}`}>
+          <div className={stylesAboutUs.team}>
+            <ul className={stylesAboutUs['grid-list']}>
               {Array(3).fill().map((_, index) => (
                 <li key={index}>
-                  <div className={`team-card ${stylesAboutUs['team-card']}`}>
-                    <figure className={`card-banner img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
+                  <div className={stylesAboutUs['team-card']}>
+                    <figure className={`img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
                       <Image src='/assets/images/portfolio-1.jpg' width={560} height={350} loading="lazy" alt="Team member" className={stylesAboutUs.imgCover} />
                     </figure>
-                    <div className={`card-content ${stylesAboutUs['card-content']}`}>
-                      <h2 className={`card-title ${stylesAboutUs['card-title']}`}>John Doe</h2>
-                      <p className={`card-text ${stylesAboutUs['card-text']}`}>
+                    <div className={stylesAboutUs['card-content']}>
+                      <h2 className={stylesAboutUs['card-title']}>John Doe</h2>
+                      <p className={stylesAboutUs['card-text']}>
                         lorem ipsum bla bla bla
                       </p>
                     </div>
