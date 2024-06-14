@@ -5,9 +5,9 @@ import stylesAboutUs from './css/AboutUs.module.css';
 
 
 
-const ServicesPage = () => {
+const ServicesPage = ({ recipe }) => {
     
-
+  const {title, thumbnail} = recipe.fields
   return (
     <>
       {/* Portfolio Section */}
@@ -81,10 +81,10 @@ const ServicesPage = () => {
                 <li key={index}>
                   <div className={stylesAboutUs['team-card']}>
                     <figure className={`img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
-                      <Image src='/assets/images/portfolio-1.jpg' width={560} height={350} loading="lazy" alt="Team member" className={stylesAboutUs.imgCover} />
+                      <Image src={`https:${thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt="Team member" className={stylesAboutUs.imgCover} />
                     </figure>
                     <div className={stylesAboutUs['card-content']}>
-                      <h2 className={stylesAboutUs['card-title']}>John Doe</h2>
+                      <h2 className={stylesAboutUs['card-title']}>{title}</h2>
                       <p className={stylesAboutUs['card-text']}>
                         lorem ipsum bla bla bla
                       </p>
