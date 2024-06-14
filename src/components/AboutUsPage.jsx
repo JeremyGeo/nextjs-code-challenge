@@ -1,4 +1,4 @@
-// src/pages/about/index.jsx
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './css/AboutUs.module.css';
