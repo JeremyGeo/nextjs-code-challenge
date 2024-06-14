@@ -211,10 +211,10 @@
 
   .heroBanner {
     position: absolute;
-    top: 60%;
+    top: 58%;
     left: 10%;
     transform: translateY(-50%);
-    width: 45%;
+    width: 43%;
     z-index: -1;
   }
 

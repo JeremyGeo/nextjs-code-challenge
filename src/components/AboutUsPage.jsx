@@ -30,7 +30,7 @@ const AboutUsPage = () => {
     return (
       <>
         {/* About Us Section */}
-        <section className={`section ${styles.about}`} id="about" aria-label="about">
+        <section className={`sectionTop ${styles.about}`} id="about" aria-label="about">
           <div className="container">
             <h2 className="h2 section-title">About Us</h2>
           </div>
@@ -43,33 +43,34 @@ const AboutUsPage = () => {
             <div className={styles['about-content']}>
               <h3 className="h3">Who We Are</h3>
               <p className="section-text">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Pfolio was founded in 2018 with a vision to revolutionize the digital landscape through innovative branding and web development solutions. Starting as a small team of passionate creatives and tech enthusiasts, we embarked on a journey to help businesses build powerful online presences.
               </p>
   
-              <h3 className="h3">Our Success</h3>
+              <h3 className="h3">Our Successes</h3>
               <ul className={styles['about-list']}>
                 <li className={styles['about-item']}>
+                </li>
+                <li className={styles['about-item']}>
                   <p className="section-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  2019: Launched our first major project, setting a new standard for web development in our industry.
                   </p>
                 </li>
                 <li className={styles['about-item']}>
                   <p className="section-text">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                  2020: Expanded our team to include expert brand strategists and digital marketers, broadening our service offerings.
                   </p>
                 </li>
                 <li className={styles['about-item']}>
                   <p className="section-text">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
+                  2022: Opened a new office in Jakarta, reflecting our continued growth and expansion.
                   </p>
                 </li>
+               
               </ul>
   
               <h3 className="h3">Our Mission</h3>
               <p className="section-text">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
-                quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in.
+              Our mission is to transform visions into vibrant digital experiences. We are dedicated to delivering innovative, high-quality branding and web development solutions that drive success for businesses of all sizes. 
               </p>
             </div>
           </div>
@@ -79,9 +80,7 @@ const AboutUsPage = () => {
         <section className={`section ${styles.culture}`} aria-labelledby="culture-label">
           <div className="container">
             <h2 className="h2 title section-title">Our Culture</h2>
-            <p className="section-text">
-              Use this section to describe your company and the products you offer. You could share your company’s story and details about why you are in business.
-            </p>
+            
   
             <div className={styles.wrapper}>
               <figure className={styles['culture-banner']}>
@@ -93,28 +92,28 @@ const AboutUsPage = () => {
                   <Image src='/assets/images/process-icon-1.png' width={60} height={60} loading="lazy" className={styles['item-icon']} alt="" />
                   <h3 className="h3 title item-title">Ideation</h3>
                   <p className="item-text">
-                    Use this section to describe your company and the products you offer. You could share your company’s
+                  We encourage our team to think outside the box and explore new ideas.
                   </p>
                 </li>
                 <li className={styles['culture-item']}>
                   <Image src='/assets/images/process-icon-2.png' width={60} height={60} loading="lazy" className={styles['item-icon']} alt="" />
                   <h3 className="h3 title item-title">Budget</h3>
                   <p className="item-text">
-                    Use this section to describe your company and the products you offer. You could share your company’s
+                  We are commited to delivering high-quality solutions without unnecessary delays or costs.
                   </p>
                 </li>
                 <li className={styles['culture-item']}>
                   <Image src='/assets/images/process-icon-3.png' width={60} height={60} loading="lazy" className={styles['item-icon']} alt="" />
                   <h3 className="h3 title item-title">Performance</h3>
                   <p className="item-text">
-                    Use this section to describe your company and the products you offer. You could share your company’s
+                  From the initial concept to the final delivery, we strive for the highest standards of quality.
                   </p>
                 </li>
                 <li className={styles['culture-item']}>
                   <Image src='/assets/images/process-icon-4.png' width={60} height={60} loading="lazy" className={styles['item-icon']} alt="" />
                   <h3 className="h3 title item-title">Speed</h3>
                   <p className="item-text">
-                    Use this section to describe your company and the products you offer. You could share your company’s
+                  We prioritize speed and efficiency in our processes, delivering solutions for our clients' urgent needs.
                   </p>
                 </li>
               </ul>

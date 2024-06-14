@@ -28,12 +28,12 @@ const TeamPage = () => {
   }, []);
 
   return (
-    <section className={`section ${styles.team1}`} aria-labelledby="team-profile-label">
+    <section className={`sectionTop ${styles.team1}`} aria-labelledby="team-profile-label">
       <div className="container">
         <div className={styles.titleWrapper}>
           <div>
-            <p className="section-subtitle" id="team-profile-label">Meet Our Team</p>
-            <h2 className="h2 section-title">Team Profile</h2>
+            
+            <h2 className="h2 section-title">Our Team Profile</h2>
           </div>
         </div>
         <ul className={styles.team1List}>

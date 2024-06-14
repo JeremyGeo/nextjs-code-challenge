@@ -4,6 +4,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import styles from './css/Home.module.css';
+import Link from 'next/link';
 
 const HomePage = () => {
   useEffect(() => {
@@ -33,33 +34,61 @@ const HomePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className={`section ${styles.hero}`} >
+      <section className={`sectionTop ${styles.hero}`} >
         <div className="container">
           <div className={styles.heroContent}>
-            <h1 className={`h1 ${styles.heroTitle}`}>Jeremy Geofany</h1>
-            <p className={styles.heroSubtitle}>Web Developer</p>
+            <h1 className={`h1 ${styles.heroTitle}`}>Pfolio</h1>
+            <p className={styles.heroSubtitle}>Web Development And Branding</p>
             <div className={styles.heroBanner}>
               <Image src="/assets/images/hero-banner.jpg" width={800} height={800} alt="Jeremy Geofany" className="w-100" />
             </div>
             <p className={styles.sectionText}>
-              As a web developer, I create interactive and visually stunning websites that enhance user experience and deliver seamless functionality.
+              We create interactive and visually stunning websites that enhance user experience and deliver seamless functionality.
             </p>
-            <a href="mailto:michaeljohnson@company.com" className="btn has-before">About Us</a>
+            
           </div>
+        </div>
+      </section>
+      {/* Company Overview */}
+
+      <section className='section'>
+        <div className="container">
+        <p className="section-subtitle">We Make The Future</p>
+          <h2 className="h2 section-title" >Your Branding And Web Development Solution</h2>
+          
+            <p className={styles.sectionText}>
+            Founded in 2018, Pfolio is a leading agency specializing in branding and web development. Our journey began with a small team of dedicated creatives and tech enthusiasts, and has grown into a dynamic powerhouse known for innovative designs and strategic solutions. Our talented team of designers, developers, brand strategists, and digital marketers work collaboratively to deliver bespoke solutions that exceed client expectations.
+            </p>
+
+            <p className={styles.sectionText}>
+            At Pfolio, we foster a culture of innovation, collaboration, and continuous learning. We believe in the power of diverse perspectives and open communication, creating an environment where creativity thrives. Passionate about our work, we are committed to transforming visions into vibrant digital experiences and driving success for businesses across industries. Join us and experience the difference of a dedicated, creative, and results-driven team.
+            </p>
+         
+        
+
+          <Link href="/aboutus" className="btn has-before">
+          <span className={styles.span}>About Us</span>
+          <span className="material-icons">arrow_forward</span>
+        </Link>
         </div>
       </section>
 
       {/* Service Section */}
       <section className={`section ${styles.service}`}>
         <div className="container">
+        
+          <h2 className="h2 section-title" id="portfolio-label">Our Services</h2>
+            <p className={styles.sectionText}>
+            We provide cutting-edge web development, creating visually stunning and highly functional websites tailored to your needs. We specialize in brand awareness, crafting unique and impactful brand identities that resonate with your target market. Additionally, our digital marketing services drive engagement and growth through strategic campaigns across various platforms.
+            </p>
           <div className="slider" data-slider>
             <ul className={"slider-container"} data-slider-container>
               {[
-                { title: 'UI/UX Design', icon: 'download', text: 'I specialize in designing intuitive and user-friendly interfaces that prioritize user experience and engagement.', number: '01' },
-                { title: 'Web Development', icon: 'desktop_windows', text: 'I develop responsive and dynamic websites using the latest web technologies and best practices.', number: '02' },
-                { title: 'SEO Optimization', icon: 'show_chart', text: 'I implement SEO strategies to improve website visibility and search engine rankings, driving more organic traffic.', number: '03' },
-                { title: 'E-commerce Solutions', icon: 'shopping_basket', text: 'I create robust e-commerce platforms with seamless shopping experiences and secure payment integrations.', number: '04' },
-                { title: 'Branding & Identity', icon: 'palette', text: 'I help businesses establish a strong brand identity with consistent design and messaging across all platforms.', number: '05' }
+                { title: 'UI/UX Design', icon: 'download', text: 'We specialize in designing intuitive and user-friendly interfaces that prioritize user experience and engagement.', number: '01' },
+                { title: 'Web Development', icon: 'desktop_windows', text: 'We develop responsive and dynamic websites using the latest web technologies and best practices.', number: '02' },
+                { title: 'SEO Optimization', icon: 'show_chart', text: 'We implement SEO strategies to improve website visibility and search engine rankings.', number: '03' },
+                { title: 'E-commerce', icon: 'shopping_basket', text: 'We create robust e-commerce platforms with seamless shopping experiences.', number: '04' },
+                { title: 'Branding', icon: 'palette', text: 'We help businesses establish a strong brand identity with consistent design and messaging across all platforms.', number: '05' }
               ].map((service, index) => (
                 <li className="slider-item" data-slider-item key={index}>
                   <div className={styles.serviceCard}>
@@ -91,19 +120,18 @@ const HomePage = () => {
       {/* Portfolio Section */}
       <section className={`section ${styles.portfolio}`} aria-labelledby="portfolio-label">
         <div className="container">
-          <p className="section-subtitle">I Make The Future</p>
-          <h2 className="h2 section-title" id="portfolio-label">Portfolio</h2>
-          <div className={styles.skillsWrapper}>
+          <h2 className="h2 section-title" >Our Projects</h2>
+          
             <p className={styles.sectionText}>
-              Phasellus et lacus suscipit congue nisl the volutpat magna. donec miss the drana risus tincidunt convallis
-              velit orci congue tortor eu dignissim ipsum suam non odio. Pellenta esuntion miss the imperdiet metus
-              ornare.
+            Since 2018 we have hundreds of projects and also hundreds of satisfied clients. Our clients span a diverse range of industries, from startups to established enterprises. We take pride in the strong relationships we build and the positive impact our work has on their businesses. Our clients consistently express their satisfaction with our innovative solutions and exceptional services. Click down here to take a closer look at our projects and testimonials!
             </p>
-          </div>
-          <a href="#" className="btn has-before">
-            <span className={styles.span}>Read more</span>
-          <span className="material-icons">arrow_forward</span>
-          </a>
+         
+          
+          
+          <Link href="/services" className="btn has-before">
+            <span className={styles.span}>Our Projects</span>
+            <span className="material-icons">arrow_forward</span>
+          </Link>
           
           <div className="slider" data-slider>
             <ul className="slider-container" data-slider-container>

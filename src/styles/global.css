@@ -29,7 +29,8 @@
   --fw-700: 700;
   
   /* spacing */
-  --section-padding: 60px;
+  --section-top-padding: 100px;
+  --section-padding: 40px;
   
   /* border radius */
   --radius-pill: 100px;
@@ -124,6 +125,12 @@
   }
   
   .section { padding-block: var(--section-padding); }
+
+  .sectionTop { 
+    
+    padding-top: var(--section-top-padding);
+    padding-bottom: var(--section-padding);
+  }
   
   .h1 {
     font-size: var(--fs-3);

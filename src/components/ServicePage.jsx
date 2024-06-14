@@ -11,17 +11,15 @@ const ServicesPage = () => {
   return (
     <>
       {/* Portfolio Section */}
-      <section className={`section ${stylesHome.portfolio}`} aria-labelledby="portfolio-label">
+      <section className={`sectionTop ${stylesHome.portfolio}`} aria-labelledby="portfolio-label">
         <div className="container">
-          <p className="section-subtitle">I Make The Future</p>
-          <h2 className="h2 section-title">Portfolio</h2>
-          <div className={`skills-wrapper ${stylesHome['skills-wrapper']}`}>
-            <p className="section-text">
-              Phasellus et lacus suscipit congue nisl the volutpat magna. donec miss the drana risus tincidunt convallis
-              velit orci congue tortor eu dignissim ipsum suam non odio. Pellenta esuntion miss the imperdiet metus
-              ornare.
+          
+          <h2 className="h2 section-title">Our Services</h2>
+         
+            <p className={stylesHome.sectionText}>
+            We offer a comprehensive suite of services designed to elevate your brand and enhance your digital presence. Our web development team creates visually stunning and highly functional websites that are tailored to meet your specific needs. In branding, we craft unique and impactful brand identities that resonate with your target audience and set you apart from the competition. Lastly our digital marketing experts develop strategic campaigns that drive engagement and growth across various platforms.
             </p>
-          </div>
+          
 
           <div className={stylesHome.servicePortfolio}>
             <ul className={stylesHome.gridList}>
@@ -39,8 +37,8 @@ const ServicesPage = () => {
                   <div className={`${stylesHome.portfolioCard} img-holder`} style={{ '--width': 600, '--height': 600 }}>
                     <Image src='/assets/images/portfolio-2.jpg' width={600} height={600} loading="lazy" alt="portfolio" className={stylesHome.imgCover} />
                     <div className={stylesHome.cardContent}>
-                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 001</h3>
-                      <p className={stylesHome.cardText}>Website Design</p>
+                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 002</h3>
+                      <p className={stylesHome.cardText}>Brand Management</p>
                     </div>
                     
                   </div>
@@ -49,8 +47,8 @@ const ServicesPage = () => {
                   <div className={`${stylesHome.portfolioCard} img-holder`} style={{ '--width': 600, '--height': 600 }}>
                     <Image src='/assets/images/portfolio-3.jpg' width={600} height={600} loading="lazy" alt="portfolio" className={stylesHome.imgCover} />
                     <div className={stylesHome.cardContent}>
-                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 001</h3>
-                      <p className={stylesHome.cardText}>Website Design</p>
+                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 003</h3>
+                      <p className={stylesHome.cardText}>Website Design And Google Ads</p>
                     </div>
                     
                   </div>
@@ -59,8 +57,8 @@ const ServicesPage = () => {
                   <div className={`${stylesHome.portfolioCard} img-holder`} style={{ '--width': 600, '--height': 600 }}>
                     <Image src='/assets/images/portfolio-1.jpg' width={600} height={600} loading="lazy" alt="portfolio" className={stylesHome.imgCover} />
                     <div className={stylesHome.cardContent}>
-                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 001</h3>
-                      <p className={stylesHome.cardText}>Website Design</p>
+                      <h3 className={`h3 ${stylesHome.cardTitle}`}>Lab. 004</h3>
+                      <p className={stylesHome.cardText}>Website Design And Social Media</p>
                     </div>
                     
                   </div>
@@ -75,7 +73,7 @@ const ServicesPage = () => {
       {/* Team Section */}
       <section className={`section ${stylesAboutUs.team}`} aria-labelledby="team-label">
         <div className="container">
-          <p className="section-subtitle" id="team-label">Case Studies</p>
+          
           <h2 className="h2 section-title">Let's Hear What Others Say</h2>
           <div className={stylesAboutUs.team}>
             <ul className={stylesAboutUs['grid-list']}>
