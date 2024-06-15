@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const ServicesPage = ({ testimonials }) => {
     
-  // const {title, thumbnail} = recipe.fields
+  
   return (
     <>
       {/* Portfolio Section */}
@@ -83,7 +83,7 @@ const ServicesPage = ({ testimonials }) => {
                   <div className={stylesAboutUs['team-card']}>
                     
                     <figure className={`img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
-                      <Image src={`https:${testimonial.fields.thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt={testimonial.fields.title} className={stylesAboutUs.imgCover} />
+                      <Image src={`https:${testimonial.fields.thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt= "testimonial" className={stylesAboutUs.imgCover} />
                     </figure>
                     
                     <div className={stylesAboutUs['card-content']}>

@@ -22,7 +22,7 @@ const HomePage = () => {
             <h1 className={`h1 ${styles.heroTitle}`}>Pfolio</h1>
             <p className={styles.heroSubtitle}>Web Development And Branding</p>
             <div className={styles.heroBanner}>
-              <Image src="/assets/images/hero-banner.jpg" width={800} height={800} alt="Jeremy Geofany" className="w-100" />
+              <Image src="/assets/images/hero-banner.jpg" width={800} height={800} alt="Hero Banner" className="w-100" />
             </div>
             <p className={styles.sectionText}>
               We create interactive and visually stunning websites that enhance user experience and deliver seamless functionality.
@@ -79,7 +79,7 @@ const HomePage = () => {
                     <h3 className={`h3 ${styles.cardTitle}`}>{service.title}</h3>
                     <p className={styles.cardText}>{service.text}</p>
                     <span className={styles.cardNumber}>{service.number}</span>
-                    <a href="#" className={styles.layerLink} aria-label={`More about my ${service.title.toLowerCase()} service`}></a>
+                    
                   </div>
                 </li>
               ))}

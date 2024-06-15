@@ -27,6 +27,7 @@
   
   --fw-800: 800;
   --fw-700: 700;
+  --fw-1200: 1200;
   
   /* spacing */
   --section-top-padding: 100px;
@@ -69,8 +70,7 @@
   img,
   span,
   data,
-  button,
-  ion-icon { display: block; }
+  button { display: block; }
   
   a {
     color: inherit;
@@ -86,7 +86,7 @@
     cursor: pointer;
   }
   
-  ion-icon { pointer-events: none; }
+  
   
   html {
     font-family: var(--ff-syne);
@@ -209,19 +209,9 @@
     font-size: var(--fs-1);
   }
   
-  .layer-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
   .slider {
     --slider-items: 1;
     --item-gap: 12px;
-  
     margin-block-start: 60px;
     overflow: hidden;
   }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import styles from './css/Team.module.css';
 import useFetchTeam from '../utils/fetchteam';
@@ -10,7 +10,7 @@ const TeamPage = () => {
   return (
     <section className={`sectionTop ${styles.team1}`} aria-labelledby="team-profile-label">
       <div className="container">
-        <div className={styles.titleWrapper}>
+        <div>
           <div>
             <h2 className="h2 section-title">Our Team Profile</h2>
           </div>

@@ -29,9 +29,8 @@ const AboutUsPage = () => {
               </p>
   
               <h3 className="h3">Our Successes</h3>
-              <ul className={styles['about-list']}>
-                <li className={styles['about-item']}>
-                </li>
+              <ul>
+                
                 <li className={styles['about-item']}>
                   <p className="section-text">
                   2019: Launched our first major project, setting a new standard for web development in our industry.
