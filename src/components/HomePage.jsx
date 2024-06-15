@@ -5,32 +5,14 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import styles from './css/Home.module.css';
 import Link from 'next/link';
+import { initSlider } from '../utils/slider';
 
 const HomePage = () => {
   useEffect(() => {
-    const sliders = document.querySelectorAll('[data-slider]');
-    sliders.forEach(slider => {
-      const sliderContainer = slider.querySelector('[data-slider-container]');
-      const sliderItems = slider.querySelectorAll('[data-slider-item]');
-      const prevButton = slider.querySelector('[data-slider-prev]');
-      const nextButton = slider.querySelector('[data-slider-next]');
-      let currentIndex = 0;
-
-      const updateSlider = () => {
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-      };
-
-      prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
-        updateSlider();
-      });
-
-      nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % sliderItems.length;
-        updateSlider();
-      });
-    });
+    const sliders = document.querySelectorAll("[data-slider]");
+    sliders.forEach(slider => initSlider(slider));
   }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -73,16 +55,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Service Section */}
+       {/* Service Section */}
       <section className={`section ${styles.service}`}>
         <div className="container">
-        
           <h2 className="h2 section-title" id="portfolio-label">Our Services</h2>
-            <p className={styles.sectionText}>
+          <p className={styles.sectionText}>
             We provide cutting-edge web development, creating visually stunning and highly functional websites tailored to your needs. We specialize in brand awareness, crafting unique and impactful brand identities that resonate with your target market. Additionally, our digital marketing services drive engagement and growth through strategic campaigns across various platforms.
-            </p>
+          </p>
           <div className="slider" data-slider>
-            <ul className={"slider-container"} data-slider-container>
+            <ul className="slider-container" data-slider-container>
               {[
                 { title: 'UI/UX Design', icon: 'download', text: 'We specialize in designing intuitive and user-friendly interfaces that prioritize user experience and engagement.', number: '01' },
                 { title: 'Web Development', icon: 'desktop_windows', text: 'We develop responsive and dynamic websites using the latest web technologies and best practices.', number: '02' },
@@ -120,19 +101,14 @@ const HomePage = () => {
       {/* Portfolio Section */}
       <section className={`section ${styles.portfolio}`} aria-labelledby="portfolio-label">
         <div className="container">
-          <h2 className="h2 section-title" >Our Projects</h2>
-          
-            <p className={styles.sectionText}>
+          <h2 className="h2 section-title">Our Projects</h2>
+          <p className={styles.sectionText}>
             Since 2018 we have hundreds of projects and also hundreds of satisfied clients. Our clients span a diverse range of industries, from startups to established enterprises. We take pride in the strong relationships we build and the positive impact our work has on their businesses. Our clients consistently express their satisfaction with our innovative solutions and exceptional services. Click down here to take a closer look at our projects and testimonials!
-            </p>
-         
-          
-          
+          </p>
           <Link href="/services" className="btn has-before">
             <span className={styles.span}>Our Projects</span>
             <span className="material-icons">arrow_forward</span>
           </Link>
-          
           <div className="slider" data-slider>
             <ul className="slider-container" data-slider-container>
               {[
