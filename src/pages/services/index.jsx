@@ -1,16 +1,11 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ServicePage from '../../components/ServicePage';
-import { createClient } from 'contentful';
+import contentfulClient from '../../utils/contentful';
 export async function getStaticProps() {
-  async function getRecipes() {
+  async function getTestimonial() {
     try {
-      const client = createClient({
-        space: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      });
-
-      const res = await client.getEntries({ content_type: 'recipe' });
+      const res = await contentfulClient.getEntries({ content_type: 'testimonial' });
       return res.items;
     } catch (error) {
       console.error(error);
@@ -18,21 +13,22 @@ export async function getStaticProps() {
     }
   }
 
-  const recipes = await getRecipes();
+  const testimonials = await getTestimonial();
+  
 
   return {
     props: {
-      recipes,
+      testimonials,
     },
   };
 }
 
-export default function Services({ recipes }) {
+export default function Services({ testimonials }) {
 
   return (
     <>
       <Header />
-      {recipes.map(recipe =><ServicePage key={recipe.sys.id} recipe={recipe}/>)}
+      <ServicePage testimonials={testimonials} />
       <Footer />
     </>
   );

@@ -2,12 +2,12 @@
 import Image from 'next/image';
 import stylesHome from './css/Home.module.css';
 import stylesAboutUs from './css/AboutUs.module.css';
+import Link from 'next/link';
 
 
-
-const ServicesPage = ({ recipe }) => {
+const ServicesPage = ({ testimonials }) => {
     
-  const {title, thumbnail} = recipe.fields
+  // const {title, thumbnail} = recipe.fields
   return (
     <>
       {/* Portfolio Section */}
@@ -70,23 +70,25 @@ const ServicesPage = ({ recipe }) => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Testimonial Section */}
       <section className={`section ${stylesAboutUs.team}`} aria-labelledby="team-label">
         <div className="container">
           
           <h2 className="h2 section-title">Let's Hear What Others Say</h2>
           <div className={stylesAboutUs.team}>
             <ul className={stylesAboutUs['grid-list']}>
-              {Array(3).fill().map((_, index) => (
-                <li key={index}>
+            {testimonials.map((testimonial) => (
+                <li key={testimonial.sys.id}>
                   <div className={stylesAboutUs['team-card']}>
+                    <Link href={`/testimonials/${testimonial.fields.slug}`}>
                     <figure className={`img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
-                      <Image src={`https:${thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt="Team member" className={stylesAboutUs.imgCover} />
+                      <Image src={`https:${testimonial.fields.thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt={testimonial.fields.title} className={stylesAboutUs.imgCover} />
                     </figure>
+                    </Link>
                     <div className={stylesAboutUs['card-content']}>
-                      <h2 className={stylesAboutUs['card-title']}>{title}</h2>
+                      <h2 className={stylesAboutUs['card-title']}>{testimonial.fields.name}</h2>
                       <p className={stylesAboutUs['card-text']}>
-                        lorem ipsum bla bla bla
+                      {testimonial.fields.testimony}
                       </p>
                     </div>
                   </div>
