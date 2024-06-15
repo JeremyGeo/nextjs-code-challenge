@@ -2,6 +2,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ServicePage from '../../components/ServicePage';
 import contentfulClient from '../../utils/contentful';
+
+
 export async function getStaticProps() {
   async function getTestimonial() {
     try {
@@ -14,7 +16,6 @@ export async function getStaticProps() {
   }
 
   const testimonials = await getTestimonial();
-  
 
   return {
     props: {

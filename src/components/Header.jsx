@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './css/Header.module.css'; // Import CSS module for scoped styling
+import styles from './css/Header.module.css'; 
 
 const Header = () => {
   const [navActive, setNavActive] = useState(false);

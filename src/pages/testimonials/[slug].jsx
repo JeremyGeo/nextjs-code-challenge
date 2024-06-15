@@ -31,10 +31,6 @@ export async function getStaticProps({ params }) {
 
 export default function Testimonial({ testimonial }) {
   const router = useRouter();
-  if (!router.isFallback && !testimonial) {
-    return <div>Loading...</div>;
-  }
-
   const { name, testimony, picture } = testimonial.fields;
 
   return (

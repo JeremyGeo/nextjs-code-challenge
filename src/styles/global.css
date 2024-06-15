@@ -204,10 +204,6 @@
   
   .section-title { margin-block-end: 45px; }
   
-  .text-lg {
-    font-family: var(--ff-syne);
-    font-size: var(--fs-1);
-  }
   
   .slider {
     --slider-items: 1;
@@ -304,14 +300,7 @@
 
  .container { max-width: 720px; }
 
- .title-wrapper {
-   display: flex;
-   gap: 10%;
- }
 
- .title-wrapper .section-title { margin-block-end: 0; }
-
- .title-wrapper .section-text { margin-block-start: 40px; }
 
 }
 
@@ -342,8 +331,6 @@
   */
 
  .container { max-width: 960px; }
-
- .title-wrapper { gap: 15%; }
 
  .slider { --slider-items: 3; }
 
