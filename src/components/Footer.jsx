@@ -10,19 +10,17 @@ const Footer = () => {
         <div className={`container ${styles.container}`}>
           <ul className="footer-list">
             <li>
-              <p className="h4 footer-list-title">Get in touch</p>
+              <p className="h4 footer-list-title">pfolio@something.com</p>
             </li>
-            <li>
-              <a className="footer-link">pfolio@something.com</a>
-            </li>
+            
           </ul>
           <ul className="footer-list">
             <li>
-              <p className="h4 footer-list-title">Locations</p>
+              <p className="h4 footer-list-title">Jakarta -- Indonesia</p>
             </li>
-            <li>
+            {/* <li>
               <a className="footer-link">Jakarta -- Indonesia</a>
-            </li>
+            </li> */}
           </ul>
           
         </div>

@@ -124,7 +124,7 @@ const HomePage = () => {
                       <h3 className={`h3 ${styles.cardTitle}`}>{portfolio.title}</h3>
                       <p className={styles.cardText}>{portfolio.text}</p>
                     </div>
-                    <a href="#" className={styles.layerLink}></a>
+                    
                   </div>
                 </li>
               ))}
