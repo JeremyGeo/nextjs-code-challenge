@@ -20,7 +20,8 @@ const TeamPage = () => {
             <li key={index}>
               <div className={styles.team1Card}>
                 <figure className={`${styles.cardBanner} img-holder`} style={{ '--width': 700, '--height': 470 }}>
-                  <Image src={member.image} width={600} height={300} alt={member.name} className={styles.imgCover} />
+                  <Image src={member.image} width={700} height={470} alt={member.name} className={styles.imgCover}  placeholder="blur"
+                    blurDataURL={member.image} />
                 </figure>
                 <div className={styles.cardContent}>
                   <div>
