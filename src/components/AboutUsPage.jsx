@@ -1,31 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import styles from './css/AboutUs.module.css';
+import useFetchTeam from '../utils/fetchteam';
 
-import axios from 'axios';
 
 const AboutUsPage = () => {
 
-  const [team, setTeam] = useState([]);
-
-  useEffect(() => {
-    const fetchTeam = async () => {
-      try {
-        const response = await axios.get('https://randomuser.me/api/?results=3'); // Fetch 3 random users
-        const teamData = response.data.results.map(user => ({
-          name: `${user.name.first} ${user.name.last}`,
-          image: user.picture.large,
-          text: 'Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.', // Static text for demonstration
-        }));
-        setTeam(teamData);
-      } catch (error) {
-        console.error('Error fetching team data:', error);
-      }
-    };
-
-    fetchTeam();
-  }, []);
+    const team = useFetchTeam();
 
     return (
       <>
@@ -124,7 +106,6 @@ const AboutUsPage = () => {
         {/* Team Section */}
         <section className={`section ${styles.team}`} aria-labelledby="team-label">
           <div className="container">
-            <p className="section-subtitle" id="team-label">Case Studies</p>
             <h2 className="h2 section-title">Our Team</h2>
             
             <div className={styles.team}>
@@ -138,7 +119,7 @@ const AboutUsPage = () => {
                   <div className={styles['card-content']}>
                     <h2 className={styles['card-title']}>{member.name}</h2>
                     <p className={styles['card-text']}>
-                      {member.text}
+                      {member.title}
                     </p>
                   </div>
                 </div>

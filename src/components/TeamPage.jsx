@@ -1,38 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Image from 'next/image'; // Import Image component from Next.js
-
-import styles from './css/Team.module.css'; // Import CSS module
+import Image from 'next/image';
+import styles from './css/Team.module.css';
+import useFetchTeam from '../utils/fetchteam';
 
 const TeamPage = () => {
-  const [team, setTeam] = useState([]);
-
-  useEffect(() => {
-    const fetchTeam = async () => {
-      try {
-        const response = await axios.get('https://randomuser.me/api/?results=5'); // Fetch 3 random users
-        const teamData = response.data.results.map(user => ({
-          name: `${user.name.first} ${user.name.last}`,
-          email: user.email,
-          image: user.picture.large,
-          title: 'Lead Developer', // Static title for demonstration
-          expertise: 'Web Development, Software Engineering, AI', // Static expertise for demonstration
-        }));
-        setTeam(teamData);
-      } catch (error) {
-        console.error('Error fetching team data:', error);
-      }
-    };
-
-    fetchTeam();
-  }, []);
+  
+    const team = useFetchTeam();
 
   return (
     <section className={`sectionTop ${styles.team1}`} aria-labelledby="team-profile-label">
       <div className="container">
         <div className={styles.titleWrapper}>
           <div>
-            
             <h2 className="h2 section-title">Our Team Profile</h2>
           </div>
         </div>

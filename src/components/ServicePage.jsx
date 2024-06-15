@@ -64,7 +64,7 @@ const ServicesPage = ({ testimonials }) => {
                   </div>
                 
               </li>
-              {/* Other portfolio items */}
+              
             </ul>
           </div>
         </div>
@@ -79,12 +79,13 @@ const ServicesPage = ({ testimonials }) => {
             <ul className={stylesAboutUs['grid-list']}>
             {testimonials.map((testimonial) => (
                 <li key={testimonial.sys.id}>
+                  <Link href={`/testimonials/${testimonial.fields.slug}`}>
                   <div className={stylesAboutUs['team-card']}>
-                    <Link href={`/testimonials/${testimonial.fields.slug}`}>
+                    
                     <figure className={`img-holder ${stylesAboutUs['card-banner']}`} style={{ '--width': 560, '--height': 350 }}>
                       <Image src={`https:${testimonial.fields.thumbnail.fields.file.url}`} width={560} height={350} loading="lazy" alt={testimonial.fields.title} className={stylesAboutUs.imgCover} />
                     </figure>
-                    </Link>
+                    
                     <div className={stylesAboutUs['card-content']}>
                       <h2 className={stylesAboutUs['card-title']}>{testimonial.fields.name}</h2>
                       <p className={stylesAboutUs['card-text']}>
@@ -92,6 +93,7 @@ const ServicesPage = ({ testimonials }) => {
                       </p>
                     </div>
                   </div>
+                  </Link>
                 </li>
               ))}
             </ul>
