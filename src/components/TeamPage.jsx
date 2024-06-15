@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import styles from './css/Team.module.css';
 import useFetchTeam from '../utils/fetchteam';
+import SkeletonLoader from './SkeletonLoader';
 
 const TeamPage = () => {
   
