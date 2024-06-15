@@ -16,24 +16,33 @@ const TeamPage = () => {
           </div>
         </div>
         <ul className={styles.team1List}>
-          {team.map((member, index) => (
-            <li key={index}>
-              <div className={styles.team1Card}>
-                <figure className={`${styles.cardBanner} img-holder`} style={{ '--width': 700, '--height': 470 }}>
-                  <Image src={member.image} width={700} height={470} alt={member.name} className={styles.imgCover}  placeholder="blur"
-                    blurDataURL={member.image} />
-                </figure>
-                <div className={styles.cardContent}>
-                  <div>
-                    <h3 className={`h3 ${styles.cardTitle}`}>{member.name}</h3>
-                    <p className={styles.cardText}>{member.title}</p>
-                    <p className={styles.cardText}>{member.expertise}</p>
-                    <a href={`mailto:${member.email}`} className="btn has-before">{member.email}</a>
+          {team.length === 0
+            ? Array.from({ length: 5 }).map((_, index) => <SkeletonLoader key={index} />)
+            : team.map((member, index) => (
+                <li key={index}>
+                  <div className={styles.team1Card}>
+                    <figure className={`${styles.cardBanner} img-holder`} style={{ '--width': 700, '--height': 470 }}>
+                      <Image
+                        src={member.image}
+                        width={700}
+                        height={470}
+                        alt={member.name}
+                        className={styles.imgCover}
+                        placeholder="blur"
+                        blurDataURL={member.image}
+                      />
+                    </figure>
+                    <div className={styles.cardContent}>
+                      <div>
+                        <h3 className={`h3 ${styles.cardTitle}`}>{member.name}</h3>
+                        <p className={styles.cardText}>{member.title}</p>
+                        <p className={styles.cardText}>{member.expertise}</p>
+                        <a href={`mailto:${member.email}`} className="btn has-before">{member.email}</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </li>
-          ))}
+                </li>
+              ))}
         </ul>
       </div>
     </section>
